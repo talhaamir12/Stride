@@ -43,14 +43,16 @@ const Wrapper = styled.div`
   color: white;
   position: relative;
   width: 100%;
-  height: 100$;
+  height: 100%;
   overflow-x: hidden;
 
   .spline {
     position: absolute;
     margin: 0;
     top: 0;
-    right: 0;
+    left: 20%;
+    width: 50%;
+    height: auto;
 
     @media (max-width: 1024px) {
       transform: scale(0.8) translateX(200px);
@@ -75,6 +77,9 @@ const Content = styled.div`
   position: absolute;
   top: 30px;
   width: 100%;
+  min-width: 940px;
+  max-width: 50%;
+  z-index: 2;
 
   display: flex;
   flex-direction: column;
@@ -87,7 +92,7 @@ const Content = styled.div`
   h1 {
     font-family: monospace;
     font-weight: bold;
-    font-sie: 70px;
+    font-size: 70px;
     margin: 0;
     max-width: 500px;
 
@@ -187,11 +192,11 @@ const Menu = styled.ul`
 `;
 
 const Social = styled.div `
-  position: absoulte;
+  position: absolute;
   top: 150px;
   left: 30px;
   display: flex;
-  flex-direction: columnl
+  flex-direction: column;
   gap: 30px;
   align-items: center;
 
@@ -204,7 +209,7 @@ const Social = styled.div `
       #6c56ef 33.57%,
       #1306dd 65.86%,
       #aa0eb2 100%
-    )
+    );
 
     @media (max-width: 1024px) {
       display: none;
